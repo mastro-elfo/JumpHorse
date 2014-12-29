@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="css/resources/buttons.css"/>
+		<link rel="stylesheet" href="css/resources/headers.css"/>
+		<link rel="stylesheet" href="css/resources/icons.css"/>
+		<link rel="stylesheet" href="css/resources/layout.css"/>
+		<link rel="stylesheet" href="css/resources/status.css"/>
+		<link rel="stylesheet" href="css/jump_horse.css"/>
+		
+		<script type="text/javascript" src="js/dollar/dollar.nc.js"></script>
+		<script type="text/javascript" src="js/l10n.js"></script>
+		<script type="text/javascript" src="js/Page.js"></script>
+		<script type="text/javascript" src="js/jump_horse.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		
+		<link rel="shortcut icon" href="favicon.ico"/>
+	</head>
+	<body role="application">
+		<section role="region" id="index" class="current">
+			<header>
+				<button id="index-reshuffle">
+					<span class="icon gaia-icon icon-reload"></span>
+				</button>
+				<menu type="toolbar">
+					<button id="index-goto-rules" data-goto="rules" class="icon icon-options"></button>
+				</menu>
+				<h1 data-l10n="index-headertitle">Jump Horse!</h1>
+			</header>
+			<article>
+				<ul id="index-deck"></ul>
+			</article>
+			<section role="status" id="status" class="hidden">
+				<p id="status-p"></p>
+			</section>
+		</section>
+		
+		<section role="region" id="rules" class="vbox fit scroll">
+			<header>
+				<button title="Back" data-goback=""><span class="icon icon-back">back</span></button>
+				<h1 data-l10n="rules-headertitle">Rules</h1>
+			</header>
+			<section class="scroll" data-l10n="rules-text" id="rules-text">
+				<article>
+					<header>Introduction</header>
+					<p><strong>Jump Horse!</strong> (in italian <em>Zompa Cavallo!</em>) is an italian card game, tipical of the Christmas time. At least 2 players are required, but the game is funnier with 6 or more people.</p>
+					<p>The name means the particular behaviour that the card with the horsemen has in this game.</p>
+				</article>
+				<article>
+					<header>Before starting</header>
+					<p>Each player starts with 4 <em>fiches</em>. The first dealer shuffles the deck, then the first round starts.</p>
+				</article>
+				<article>
+					<header>Round</header>
+					<p>The dealer take the first card and says loudly the name of the first player to the right. The following is what can happen:</p>
+					<ul>
+						<li>the card is an ace, the called player pays 2 <em>fiches</em> and put them in the center of the table; if the player has only 1 <em>fiche</em>, also the first following player must pay a <em>fiche</em> (when an ace occurs 2 <em>fiches</em> must always be payed);</li>
+						<li>the card is a "fante", the called player pays 1 <em>fiche</em> to the previous player;</li>
+						<li>the card is a horsemen, the called player pays 1 <em>fiche</em> to the player that is two places after;</li>
+						<li>the card is a king, the called player takes 1 <em>fiche</em> back from the center of the table;</li>
+						<li>nothing happens for the other cards.</li>
+					</ul>
+					<p>The round ends when all cards are taken from the deck. 4 <em>fiches</em> should be in the center of the table. At this point, the player next to the dealer, on the right, becomes the new dealer and a new round begins.</p>
+					<p>The game ends if all but one player have lost their <em>fiches</em> and he wins the game, independently if the round is ended or not.</p>
+				</article>
+				<article>
+					<header>The dead</header>
+					<p>When a player has no more <em>fiches</em> he is called <strong>dead</strong>. When the dealer calls the cards, a dead player is not counted, but he can come back to the game receiving a <em>fiche</em> from another player (with a "fante" or an horsemen) or making other non dead player speak with him.</p>
+					<p>If a player speaks with a dead, this player gives him a <em>fiche</em>.</p>
+					<p>The dealer can speak with everybody without losing <em>fiches</em>. The dealer can also be a dead and can take <em>fiches</em> back in the same way as the other players.</p>
+				</article>
+				<article>
+					<header>Variations</header>
+					<p>It's up to you to choose what happen if a player is called with a king card but there are still no <em>fiches</em> on the table.</p>
+					<p>You can also make the game funnier adding new rules to the cards. Here are some tips:</p>
+					<ul>
+						<li>with a given card all players give a <em>fiche</em> to the following or preceding player;</li>
+						<li>with a given card all dead players take a <em>fiche</em> from the following or preceding player;</li>
+						<li>a player can bet to the following card to earn <em>fiches</em>;</li>
+						<li>...</li>
+					</ul>
+				<article>
+			</section>
+		</section>
+	</body>
+</html>

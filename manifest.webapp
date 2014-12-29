@@ -1,0 +1,32 @@
+{
+	"name": "JumpHorse!",
+	"version": "0.0",
+	"description": "Play Jump Horse with your friends and be the last to have fiches",
+	"launch_path": "/JumpHorse/index.html",
+	"icons": {
+		"32": "/JumpHorse/img/logo-32.png",
+		"60": "/JumpHorse/img/logo-60.png",
+		"64": "/JumpHorse/img/logo-64.png",
+		"90": "/JumpHorse/img/logo-90.png",
+		"120": "/JumpHorse/img/logo-120.png",
+		"128": "/JumpHorse/img/logo-128.png",
+		"256": "/JumpHorse/img/logo-256.png",
+		"512": "/JumpHorse/img/logo-512.png"
+	},
+	"developer": {
+		"name": "Francesco Michienzi",
+		"url": "http://mastro-elfo.github.io"
+	},
+	"default_locale": "en",
+	"type": "web",
+	"locales": {
+		"en": {
+				"name": "Jump Horse!",
+				"description": "Play Jump Horse with your friends and be the last to have fiches"
+		},
+		"it": {
+			"name": "Zompa Cavallo!",
+			"description": "Gioca a Zompa Cavallo con i tuoi amici e resta l'ultimo ad avere delle fiches"
+		}
+	}
+}

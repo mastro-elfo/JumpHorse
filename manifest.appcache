@@ -1,0 +1,30 @@
+CACHE MANIFEST
+# 20.11.2014 v1
+
+CACHE:
+index.html
+
+css/card-back.svg
+css/cards.png
+css/grain.png
+css/jump_horse.css
+
+css/resources/buttons.css
+css/resources/headers.css
+css/resources/icons.css
+css/resources/layout.css
+css/resources/status.css
+
+css/resources/headers/images/back.png
+css/resources/headers/images/back@1.5x.png
+css/resources/headers/images/back@2.25x.png
+css/resources/headers/images/back@2x.png
+css/resources/status/images/ui/pattern.png
+
+js/jump_horse.js
+js/l10n.js
+js/main.js
+js/Page.js
+js/dollar/dollar.nc.js
+
+favicon.ico

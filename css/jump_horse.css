@@ -1,0 +1,282 @@
+/* Setting panels: full-size <section role="region"> blocks */
+section[role="region"] {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 0;
+overflow: hidden;
+}
+section[role="region"] > header:first-child {
+	background: green url(grain.png);
+}
+section[role="region"] article > header:first-child {
+	color: white;
+  background: green url(grain.png);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+section[role="region"] article em {}
+/**
+* bug 976299 non-visible regions take an extra layer
+* in the layer tree. Remove them to improve scroll performance
+* in exchange for a reflow on section transitions.
+*
+* bug 976630 non-visible regions should have a visibility of hidden
+* for accessibility purposes. Removing the visibility transition
+* in hidden->visible avoids flashing.
+*/
+section[role="region"]:not(:target) {
+transform: translateX(+100%);
+visibility: hidden;
+}
+section[role="region"]:not(:target).previous {
+transform: translateX(-100%);
+visibility: hidden;
+}
+section[role="region"]:not(:target).current {
+transform: translateX(0);
+visibility: visible;
+}
+
+/**
+* Only use the animation when ready
+*/
+body[data-ready="true"] section[role="region"] {
+transition: transform .4s ease, visibility .4s;
+}
+body[data-ready="true"] section[role="region"].current {
+transition: transform .4s ease;
+}
+
+body[data-ready="true"] section[role="status"] {
+	transition: bottom .4s ease;
+}
+
+body {
+	font-family: sans-serif;
+  user-select: none;
+  -moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	background: green url(grain.png);
+}
+
+.hidden {
+	visibility: hidden;
+}
+section[role="status"].hidden {
+	bottom: -5em;
+  visibility: visible;
+}
+
+#rules-text {
+	padding: 0 1em;
+}
+#rules-text > article > *:last-child {
+	margin-bottom: 1em;
+}
+#rules-text > article > ul {
+	list-style: initial;
+  padding: 1em 1em 1em 2em;
+}
+
+#index-deck {}
+
+#index-deck > li {
+	display: block;
+  width: 10em;
+  height: 15em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -7.5em 0 0 -5em;
+  border-radius: 0.5em;
+  box-shadow: 1em 1em 0.5em rgba(0,0,0,0.1);
+}
+
+
+#index-deck > li .front,
+#index-deck > li .back{
+  backface-visibility: hidden;
+  background-color: white;
+  border: 0.5em solid #c83030;
+  border-radius: 0.5em;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#index-deck > li .front {
+  transform: rotateY(-180deg);
+}
+#index-deck > li .back {
+	background: white url(card-back.png) center center no-repeat;
+  background-size: 100%;
+  border-color:#c02020;
+}
+
+body[data-ready="true"] #index-deck > li,
+body[data-ready="true"] #index-deck > li{
+	transition: left 0.4s ease;
+}
+body[data-ready="true"] #index-deck > li .front,
+body[data-ready="true"] #index-deck > li .back{
+	transition: transform 0.4s ease 0.4s;
+}
+body[data-ready="true"] #index-deck > li.no-delay .front,
+body[data-ready="true"] #index-deck > li.no-delay .back{
+	transition: transform 0.4s ease;
+}
+
+#index-deck > li.show .front {
+	transform: rotateY(0deg);
+}
+#index-deck > li.show .back {
+	transform: rotateY(180deg);
+}
+
+#index-deck > li.shuffle,
+#index-deck > li.unshow{
+  left: 0;
+  margin-left: -12em;
+  background-color: red;
+}
+
+#index-deck > li .front {
+	background-image: url(cards.png);
+}
+
+#index-deck > li .front.cB.c1 {
+	background-position: -0.5% 66%;
+}
+#index-deck > li .front.cB.c2 {
+	background-position: 10.5% 65.75%;
+}
+#index-deck > li .front.cB.c3 {
+	background-position: 21.75% 65.75%;
+}
+#index-deck > li .front.cB.c4 {
+	background-position: 32.75% 66%;
+}
+#index-deck > li .front.cB.c5 {
+	background-position: 43.5% 65%;
+}
+#index-deck > li .front.cB.c6 {
+	background-position: 55% 65%;
+}
+#index-deck > li .front.cB.c7 {
+	background-position: 66% 65%;
+}
+#index-deck > li .front.cB.c8 {
+	background-position: 77.75% 66%;
+}
+#index-deck > li .front.cB.c9 {
+	background-position: 89% 66%;
+}
+#index-deck > li .front.cB.c0 {
+	background-position: 100.25% 66%;
+}
+#index-deck > li .front.cC.c1 {
+	background-position: -0.5% 34.25%;
+}
+#index-deck > li .front.cC.c2 {
+	background-position: 10.5% 34%;
+}
+#index-deck > li .front.cC.c3 {
+	background-position: 21.5% 34%;
+}
+#index-deck > li .front.cC.c4 {
+	background-position: 32.75% 33%;
+}
+#index-deck > li .front.cC.c5 {
+	background-position: 44% 34%;
+}
+#index-deck > li .front.cC.c6 {
+	background-position: 55% 33.5%;
+}
+#index-deck > li .front.cC.c7 {
+	background-position: 66.25% 33.5%;
+}
+#index-deck > li .front.cC.c8 {
+	background-position: 77.5% 33%;
+}
+#index-deck > li .front.cC.c9 {
+	background-position: 89% 33.75%;
+}
+#index-deck > li .front.cC.c0 {
+	background-position: 100% 34%;
+}
+#index-deck > li .front.cD.c1 {
+	background-position: -0.5% 1.5%;
+}
+#index-deck > li .front.cD.c2 {
+	background-position: 10.5% 1.5%;
+}
+#index-deck > li .front.cD.c3 {
+	background-position: 22% 1%;
+}
+#index-deck > li .front.cD.c4 {
+	background-position: 32.5% 1%;
+}
+#index-deck > li .front.cD.c5 {
+	background-position: 44% 1%;
+}
+#index-deck > li .front.cD.c6 {
+	background-position: 55.5% 1%;
+}
+#index-deck > li .front.cD.c7 {
+	background-position: 66.5% 1%;
+}
+#index-deck > li .front.cD.c8 {
+	background-position: 77.75% 0.5%;
+}
+#index-deck > li .front.cD.c9 {
+	background-position: 89% 1%;
+}
+#index-deck > li .front.cD.c0 {
+	background-position: 100% 1%;
+}
+#index-deck > li .front.cS.c1 {
+	background-position: -0.5% 97%;
+}
+#index-deck > li .front.cS.c2 {
+	background-position: 10.5% 97.5%;
+}
+#index-deck > li .front.cS.c3 {
+	background-position: 21.25% 98%;
+}
+#index-deck > li .front.cS.c4 {
+	background-position: 32.25% 97%;
+}
+#index-deck > li .front.cS.c5 {
+	background-position: 43.5% 98%;
+}
+#index-deck > li .front.cS.c6 {
+	background-position: 55% 98%;
+}
+#index-deck > li .front.cS.c7 {
+	background-position: 66.25% 98%;
+}
+#index-deck > li .front.cS.c8 {
+	background-position: 77.75% 97.5%;
+}
+#index-deck > li .front.cS.c9 {
+	background-position: 88.75% 98%;
+}
+#index-deck > li .front.cS.c0 {
+	background-position: 100% 98%;
+}
+
+#index-reshuffle {
+	color: white;
+}
+#index-reshuffle span:before {
+	left: 0;
+}
+
+
