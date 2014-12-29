@@ -57,7 +57,7 @@ JumpHorse.prototype.newDeck = function() {
 $.Dom.addEvent(window, 'load', function(){
 	// Set browser language
 	$.L10n.setLanguage($.L10n.sniff().substring(0, 2));
-	$.L10n.setLanguage('de');
+	// $.L10n.setLanguage('de');
 	
 	// Translate all
 	$.L10n.translateAll();
