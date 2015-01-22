@@ -57,13 +57,14 @@ JumpHorse.prototype.newDeck = function() {
 $.Dom.addEvent(window, 'load', function(){
 	// Set browser language
 	$.L10n.setLanguage($.L10n.sniff().substring(0, 2));
-	// $.L10n.setLanguage('de');
+	// $.L10n.setLanguage('es');
 	
 	// Translate all
 	$.L10n.translateAll();
 	
 	// Add 'goto' events
 	$.Each(document.body.querySelectorAll('[data-goto]'), function(item){
+		$.Dom.addClass(item, 'pointer');
 		$.Dom.addEvent(item, 'click', function(event){
 			Page.open(event.target.getAttribute('data-goto'));
 		});
@@ -71,6 +72,7 @@ $.Dom.addEvent(window, 'load', function(){
 	
 	// Add 'goback' events
 	$.Each(document.body.querySelectorAll('[data-goback]'), function(item){
+		$.Dom.addClass(item, 'pointer');
 		$.Dom.addEvent(item, 'click', function(event){
 			Page.back();
 		});
@@ -158,6 +160,7 @@ $.Dom.addEvent(window, 'load', function(){
 		}, 100);
 	});
 	
+	$.Dom.addClass('index-reshuffle', 'pointer');
 	$.Dom.addEvent('index-reshuffle', 'click', function(){
 		if (confirm($.L10n.translate('confirm-reshuffle'))) {
 			$.Dom.addClass('status', 'hidden');
@@ -167,6 +170,29 @@ $.Dom.addEvent(window, 'load', function(){
 	});
 	
 	jumpHorse.newDeck();
+	
+	// Add resize process to header title
+	(function(){
+		var h1 = $.Dom.id('index-headertitle');
+		var span = $.Dom.children(h1, 'span')[0];
+		var spanFontSize = 2.3;
+		setInterval(function(){
+			var h1Size = h1.offsetWidth -32;
+			var spanSize = span.offsetWidth;
+			
+			var fontSizeDelta = Math.min(Math.abs(spanSize -h1Size)/100, 0.11) *((h1Size < spanSize)? -1 : ((h1Size > spanSize)? 1 : 0));
+			
+			if (fontSizeDelta > 0 && fontSizeDelta < 0.1) {
+				return
+			}
+			spanFontSize +=  fontSizeDelta;
+			
+			spanFontSize = Math.min(spanFontSize, 2.3);
+			spanFontSize = Math.max(spanFontSize, 0);
+			$.Dom.style(span, 'font-size', spanFontSize+ 'rem');
+		}, 50);
+		
+	})();
 	
 	// Load ready
 	document.body.setAttribute('data-ready', 'true');
