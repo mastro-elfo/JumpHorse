@@ -73,6 +73,10 @@ section[role="status"].hidden {
   visibility: visible;
 }
 
+.pointer {
+	cursor: pointer;
+}
+
 #rules-text {
 	padding: 0 1em;
 }
@@ -148,7 +152,7 @@ body[data-ready="true"] #index-deck > li.no-delay .back{
 }
 
 #index-deck > li .front {
-	background-image: url(cards.png);
+	background-image: url(cards.jpg);
 }
 
 #index-deck > li .front.cB.c1 {
