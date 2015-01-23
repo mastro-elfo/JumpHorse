@@ -64,6 +64,13 @@ body {
 	-ms-user-select: none;
 	background: green url(grain.png);
 }
+body * {
+	user-select: none;
+  -moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+  cursor: default;
+}
 
 .hidden {
 	visibility: hidden;
@@ -114,6 +121,7 @@ section[role="status"].hidden {
   position: absolute;
   top: 0;
   left: 0;
+  cursor: pointer;
 }
 #index-deck > li .front {
   transform: rotateY(-180deg);
@@ -282,5 +290,6 @@ body[data-ready="true"] #index-deck > li.no-delay .back{
 #index-reshuffle span:before {
 	left: 0;
 }
+
 
 
