@@ -168,7 +168,7 @@ $.Dom.addEvent(window, 'load', function(){
 			jumpHorse.newDeck();
 		}
 	});
-	
+	// First shuffle
 	jumpHorse.newDeck();
 	
 	// Add resize process to header title
@@ -176,22 +176,20 @@ $.Dom.addEvent(window, 'load', function(){
 		var h1 = $.Dom.id('index-headertitle');
 		var span = $.Dom.children(h1, 'span')[0];
 		var spanFontSize = 2.3;
-		setInterval(function(){
+		var spanLineHeight = 2.3;
+		var resize = function(){
 			var h1Size = h1.offsetWidth -32;
 			var spanSize = span.offsetWidth;
-			
-			var fontSizeDelta = Math.min(Math.abs(spanSize -h1Size)/100, 0.11) *((h1Size < spanSize)? -1 : ((h1Size > spanSize)? 1 : 0));
-			
-			if (fontSizeDelta > 0 && fontSizeDelta < 0.1) {
-				return
+			// alert(h1Size +'>'+ spanSize)
+			if (h1Size < spanSize) {
+				spanFontSize -= 0.05;
+				spanLineHeight -= 0.025;
+				$.Dom.style(span, 'font-size', spanFontSize+ 'rem');
+				$.Dom.style(h1, 'line-height', spanLineHeight);
+				setTimeout(resize, 0);
 			}
-			spanFontSize +=  fontSizeDelta;
-			
-			spanFontSize = Math.min(spanFontSize, 2.3);
-			spanFontSize = Math.max(spanFontSize, 0);
-			$.Dom.style(span, 'font-size', spanFontSize+ 'rem');
-		}, 50);
-		
+		};
+		setTimeout(resize, 0);
 	})();
 	
 	// Load ready
