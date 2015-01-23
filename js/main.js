@@ -103,7 +103,9 @@ $.Dom.addEvent(window, 'load', function(){
 		
 		if (!actual && !next) {
 			$.Dom.addClass('status', 'hidden');
-			$.Dom.id('status-p').innerHTML = '';
+			setTimeout(function(){
+				$.Dom.id('status-p').innerHTML = '';
+			}, 400);
 			jumpHorse.newDeck();
 			preventDoubleClick = false;
 			return;
@@ -141,7 +143,9 @@ $.Dom.addEvent(window, 'load', function(){
 							break;
 						default:
 							$.Dom.addClass('status', 'hidden');
-							$.Dom.id('status-p').innerHTML = '';
+							setTimeout(function(){
+								$.Dom.id('status-p').innerHTML = '';
+							}, 400);
 							break;
 					}
 				}
@@ -152,7 +156,9 @@ $.Dom.addEvent(window, 'load', function(){
 				actual = next;
 				if (!actual) {
 					$.Dom.addClass('status', 'hidden');
-					$.Dom.id('status-p').innerHTML = '';
+					setTimeout(function(){
+						$.Dom.id('status-p').innerHTML = '';
+					}, 400);
 					jumpHorse.newDeck();
 				}
 				preventDoubleClick = false;
@@ -164,7 +170,9 @@ $.Dom.addEvent(window, 'load', function(){
 	$.Dom.addEvent('index-reshuffle', 'click', function(){
 		if (confirm($.L10n.translate('confirm-reshuffle'))) {
 			$.Dom.addClass('status', 'hidden');
-			$.Dom.id('status-p').innerHTML = '';
+			setTimeout(function(){
+				$.Dom.id('status-p').innerHTML = '';
+			}, 400);
 			jumpHorse.newDeck();
 		}
 	});
