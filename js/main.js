@@ -175,21 +175,26 @@ $.Dom.addEvent(window, 'load', function(){
 	(function(){
 		var h1 = $.Dom.id('index-headertitle');
 		var span = $.Dom.children(h1, 'span')[0];
-		var spanFontSize = 2.3;
-		var spanLineHeight = 2.3;
+		var fontSize = 2.3;
 		var resize = function(){
 			var h1Size = h1.offsetWidth -32;
 			var spanSize = span.offsetWidth;
-			// alert(h1Size +'>'+ spanSize)
 			if (h1Size < spanSize) {
-				spanFontSize -= 0.05;
-				spanLineHeight -= 0.025;
-				$.Dom.style(span, 'font-size', spanFontSize+ 'rem');
-				$.Dom.style(h1, 'line-height', spanLineHeight);
+				fontSize -= 0.05;
+				$.Dom.style(h1, 'font-size', fontSize+ 'rem');
 				setTimeout(resize, 0);
 			}
+			else if (h1Size > spanSize +16) {
+				fontSize += 0.05;
+				fontSize = fontSize > 2.3? 2.3 : fontSize;
+				$.Dom.style(h1, 'font-size', fontSize+ 'rem');
+				if(fontSize < 2.3) {
+					setTimeout(resize, 0);
+				}
+			}
 		};
-		setTimeout(resize, 0);
+		$.Dom.addEvent(window, 'resize', resize);
+		resize();
 	})();
 	
 	// Load ready
