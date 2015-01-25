@@ -10,7 +10,7 @@ $.L10n._strings.de = {
 	'rules-text':
 		'<article>'+
 			'<header>Einführung</header>'+
-			'<p><strong> Jump Pferd! </strong> (auf Italienisch <em>Zompa Cavallo!</em>) ist eine italienische Kartenspiel, typisch der Weihnachtszeit. Mindestens 2 Spieler sind erforderlich, aber das Spiel ist lustiger mit 6 oder mehr Personen.</p>'+
+			'<p><strong>Spring Pferd!</strong> (auf Italienisch <em>Zompa Cavallo!</em>) ist eine italienische Kartenspiel, typisch der Weihnachtszeit. Mindestens 2 Spieler sind erforderlich, aber das Spiel ist lustiger mit 6 oder mehr Personen.</p>'+
 			'<p>Der Name bedeutet das spezielle Verhalten, dass die Karte mit den Reitern in diesem Spiel hat.</p>'+
 		'</article>'+
 		'<article>'+
