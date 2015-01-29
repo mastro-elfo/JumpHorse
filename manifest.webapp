@@ -21,7 +21,7 @@
 	"locales": {
 		"de": {
 				"name": "Spring Pferd!",
-				"description": "Spielen Sie Spring Pferd mit Ihnen freunden und Verwandten"
+				"description": "<b>Spring Pferd!</b> (auf Italienisch <em>Zompa Cavallo!</em>) ist eine italienische Kartenspiel, typisch der Weihnachtszeit.<br/>Spielen Sie Spring Pferd mit Ihnen freunden und Verwandten"
 		},
 		"en": {
 				"name": "Jump Horse!",
@@ -29,11 +29,11 @@
 		},
 		"es": {
 				"name": "Salta Caballo!",
-				"description": "Jugar Salta Caballo con amigos y parientes"
+				"description": "<b>Salta Caballo!</b> (en italiano <em>Zompa Cavallo!</em>) es un juego de cartas italiano, típico de la época de Navidad.<br/>Jugar Salta Caballo con amigos y parientes"
 		},
 		"fr": {
 				"name": "Aller Cheval!",
-				"description": "Jouer Aller cheval avec des amis et parents"
+				"description": "<b>Aller Cheval!</b> (en italien <em>Zompa Cavallo!</em>) est un jeu de cartes italien, typique de la période de Noël.<br/>Jouer Aller cheval avec des amis et parents"
 		},
 		"it": {
 				"name": "Zompa Cavallo!",
@@ -41,7 +41,7 @@
 		},
 		"pt": {
 				"name": "Salto Cavalo!",
-				"description": "Jogar Salto Cavalo com amigos e parentes"
+				"description": "<b>Salto Cavalo!</b> (em italiano <em>Zompa Cavallo!</em>) é um jogo de cartas italiano, típico da época do Natal.<br/>Jogar Salto Cavalo com amigos e parentes"
 		}
 	}
 }

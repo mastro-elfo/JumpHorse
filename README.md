@@ -1,6 +1,8 @@
 Introduction
 ============
 
+![Screenshot main screen](img/screenshot1.jpg "App main screen")
+
 **Jump Horse!** (in italian *Zompa Cavallo!*) is an italian card game, tipical of the Christmas time. At least 2 players are required, but the game is funnier with 6 or more people.
 
 The name means the particular behaviour that the card with the horsemen has in this game.
@@ -16,7 +18,7 @@ Round
 The dealer take the first card and says loudly the name of the first player to the right. The following is what can happen:
 
 * the card is an ace, the called player pays 2 *fiches* and put them in the center of the table; if the player has only 1 *fiche*, also the first following player must pay a *fiche* (when an ace occurs 2 *fiches* must always be payed);
-* the card is a "fante", the called player pays 1 *fiche* to the previous player;
+* the card is a soldier, the called player pays 1 *fiche* to the previous player;
 * the card is a horsemen, the called player pays 1 *fiche* to the player that is two places after;
 * the card is a king, the called player takes 1 *fiche* back from the center of the table;
 * nothing happens for the other cards.
