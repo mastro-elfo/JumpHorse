@@ -30,7 +30,7 @@ The game ends if all but one player have lost their *fiches* and he wins the gam
 The dead
 ========
 
-When a player has no more *fiches* he is called **dead**. When the dealer calls the cards, a dead player is not counted, but he can come back to the game receiving a *fiche* from another player (with a "fante" or an horsemen) or making other non dead player speak with him.
+When a player has no more *fiches* he is called **dead**. When the dealer calls the cards, a dead player is not counted, but he can come back to the game receiving a *fiche* from another player (with a soldier or an horsemen) or making other non dead player speak with him.
 
 If a player speaks with a dead, this player gives him a *fiche*.
 

@@ -94,7 +94,7 @@ $.Dom.addEvent(window, 'load', function(){
 		next = next[1];
 		
 		// Take the actual card
-		var actual = $.Dom.children('index-deck', 'li');
+		var actual = $.Dom.children('index-deck', 'li'); // TODO: this can be eliminated
 		actual = actual[0];
 		if (!$.Dom.hasClass(actual, 'show')) {
 			next = actual;
