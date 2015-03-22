@@ -1,6 +1,6 @@
 {
 	"name": "Jump Horse!",
-	"version": "0.1",
+	"version": "0.2",
 	"description": "Play Jump Horse with friends and relatives",
 	"launch_path": "/index.html",
 	"icons": {

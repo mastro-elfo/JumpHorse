@@ -127,9 +127,13 @@ section[role="status"].hidden {
   transform: rotateY(-180deg);
 }
 #index-deck > li .back {
-	background: white url(card-back.png) center center no-repeat;
+	background: #0A96DC url() center center no-repeat;
   background-size: 100%;
   border-color:#c02020;
+}
+#index-deck > li:first-child .back,
+#index-deck > li:first-child + li .back{
+	background-image: url(card-back.png);
 }
 
 body[data-ready="true"] #index-deck > li,
@@ -159,7 +163,8 @@ body[data-ready="true"] #index-deck > li.no-delay .back{
   background-color: red;
 }
 
-#index-deck > li .front {
+#index-deck > li:first-child .front,
+#index-deck > li:first-child + li .front{
 	background-image: url(cards.jpg);
 }
 
@@ -290,6 +295,8 @@ body[data-ready="true"] #index-deck > li.no-delay .back{
 #index-reshuffle span:before {
 	left: 0;
 }
+
+
 
 
 
