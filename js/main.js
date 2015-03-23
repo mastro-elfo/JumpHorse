@@ -89,13 +89,12 @@ $.Dom.addEvent(window, 'load', function(){
 		}
 		preventDoubleClick = true;
 		
+		var cards = $.Dom.children('index-deck', 'li');
 		// Take the next card
-		var next = $.Dom.children('index-deck', 'li');
-		next = next[1];
+		next = cards[1];
 		
 		// Take the actual card
-		var actual = $.Dom.children('index-deck', 'li'); // TODO: this can be eliminated
-		actual = actual[0];
+		var actual = cards[0];
 		if (!$.Dom.hasClass(actual, 'show')) {
 			next = actual;
 			actual = null;
